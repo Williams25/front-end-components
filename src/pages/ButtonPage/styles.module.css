@@ -1,0 +1,22 @@
+.container {
+  margin: 0;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #0e1538;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container button {
+  margin-top: 1.5rem;
+}
