@@ -1,0 +1,123 @@
+:root {
+  --clr1: #ff22bb;
+  --i1: 1;
+
+  --clr2: #00ccff;
+  --i2: 2;
+
+  --clr3: #22e622;
+  --i3: 3;
+}
+
+.button {
+  position: relative;
+  padding: 1rem 2rem;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: var(--clr1);
+  /* box-shadow: 0 0 10px var(--clr1), 0 0 30px var(--clr1), 0 0 60px var(--clr1),
+    0 0 100px var(--clr1); */
+}
+
+.button-primary::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 400%;
+  background-color: var(--clr1);
+  transition: 1s;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.2 * var(--i1));
+}
+
+.button-secondary:hover {
+  background-color: var(--clr2);
+  /* box-shadow: 0 0 10px var(--clr2), 0 0 30px var(--clr2), 0 0 60px var(--clr2),
+    0 0 100px var(--clr2); */
+}
+
+.button-secondary::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 400%;
+  background-color: var(--clr2);
+  transition: 1s;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.2 * var(--i2));
+}
+
+.button-dark:hover {
+  background-color: var(--clr3);
+  /* box-shadow: 0 0 10px var(--clr3), 0 0 30px var(--clr3), 0 0 60px var(--clr3),
+    0 0 100px var(--clr3); */
+}
+
+.button-dark::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 400%;
+  background-color: var(--clr3);
+  transition: 1s;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.2 * var(--i3));
+}
+
+.button:hover::before {
+  width: 120%;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  background-color: #0e1538;
+  inset: 4px;
+  transition: 0.5s;
+}
+
+.button:hover::after {
+  background-color: var(--clr1);
+}
+
+.button-secondary:hover::after {
+  background-color: var(--clr2);
+}
+
+.button-dark:hover::after {
+  background-color: var(--clr3);
+}
+
+.button span {
+  position: relative;
+  z-index: 10;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  opacity: 1;
+}
