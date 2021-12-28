@@ -33,7 +33,7 @@ export const SideBar = ({ children, data }: SideBarProps) => {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
