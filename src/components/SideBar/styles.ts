@@ -49,7 +49,6 @@ export const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
-    background: "red",
   },
   contentShift: {
     transition: theme.transitions.create("margin", {
