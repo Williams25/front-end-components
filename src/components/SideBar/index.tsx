@@ -1,6 +1,5 @@
 import { useState, ReactNode } from "react";
 import { useStyles } from "./styles";
-import clsx from "clsx";
 import {
   useTheme,
   Drawer,
@@ -8,10 +7,10 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Divider,
   IconButton,
+  Grid,
 } from "@material-ui/core";
-import { ChevronLeft, ChevronRight, Menu } from "@material-ui/icons";
+import { Close, Menu } from "@material-ui/icons";
 import { Items } from "./Items";
 
 type SideBarProps = {
@@ -33,55 +32,82 @@ export const SideBar = ({ children, data }: SideBarProps) => {
 
   return (
     <div className={classes.root}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <AppBar
         position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
+        className={classes.appBar}
+        classes={{
+          root: classes.appBar,
+        }}
+        style={{ zIndex: 9999 }}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpenAndClose}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <Menu />
-          </IconButton>
+          {!open && (
+            <IconButton
+              onClick={handleDrawerOpenAndClose}
+              style={{ marginRight: "0.5rem" }}
+            >
+              <Menu style={{ color: "#fff" }} />
+            </IconButton>
+          )}
+
           <Typography variant="h6" noWrap>
             Front-end components
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerOpenAndClose}>
-            {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
-          </IconButton>
-        </div>
-        <Divider />
 
-        <Items data={data} />
-      </Drawer>
-      <Toolbar />
-      <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
+      <Grid
+        container
+        direction="row"
+        wrap="nowrap"
+        style={{ zIndex: 1, minHeight: "100vh" }}
       >
-        <div className={classes.drawerHeader} />
-        {children}
-      </main>
+        {open && (
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            style={{ zIndex: 1 }}
+          >
+            <Toolbar style={{ zIndex: 1 }} />
+
+            <div
+              className={classes.drawerContainer}
+              style={{ zIndex: 1, minHeight: "100vh" }}
+            >
+              <div
+                className={classes.drawerContainerButton}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-end",
+                  width: "100%",
+                  margin: "0.5rem 0",
+                  zIndex: 1,
+                }}
+              >
+                <IconButton
+                  className={classes.menuButton}
+                  onClick={handleDrawerOpenAndClose}
+                >
+                  <Close style={{ color: "#000" }} />
+                </IconButton>
+              </div>
+              <Items data={data} />
+            </div>
+          </Drawer>
+        )}
+        <Toolbar />
+
+        <main style={{ flexGrow: 1, minHeight: "100vh" }}>
+          <Toolbar />
+          <div className={classes.drawerHeader} />
+          {children}
+        </main>
+      </Grid>
     </div>
   );
 };
