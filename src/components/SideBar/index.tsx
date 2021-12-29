@@ -1,113 +1,83 @@
 import { useState, ReactNode } from "react";
 import { useStyles } from "./styles";
 import {
-  useTheme,
-  Drawer,
   CssBaseline,
   AppBar,
   Toolbar,
-  Typography,
-  IconButton,
   Grid,
+  Container,
+  Typography,
+  Drawer,
 } from "@material-ui/core";
-import { Close, Menu } from "@material-ui/icons";
 import { Items } from "./Items";
 
 type SideBarProps = {
   children: ReactNode;
   data: {
-    label: string;
-    path: string;
+    title: string;
+    type: "button" | "collapse";
+    data: [
+      {
+        href: string;
+        text: string;
+        paths: [{ path: string; type: "dynamic" | "static" }];
+      }
+    ];
   }[];
 };
 
 export const SideBar = ({ children, data }: SideBarProps) => {
   const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
 
   const handleDrawerOpenAndClose = (): void => {
     setOpen((open) => !open);
   };
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        className={classes.appBar}
-        classes={{
-          root: classes.appBar,
-        }}
-        style={{ zIndex: 9999 }}
-      >
-        <Toolbar>
-          {!open && (
-            <IconButton
-              onClick={handleDrawerOpenAndClose}
-              style={{ marginRight: "0.5rem" }}
-            >
-              <Menu style={{ color: "#fff" }} />
-            </IconButton>
-          )}
-
-          <Typography variant="h6" noWrap>
-            Front-end components
-          </Typography>
-        </Toolbar>
-      </AppBar>
-
-      <Grid
-        container
-        direction="row"
-        wrap="nowrap"
-        style={{ zIndex: 1, minHeight: "100vh" }}
-      >
-        {open && (
+    <>
+      <div className={classes.root}>
+        <CssBaseline />
+        <AppBar
+          position="fixed"
+          className={classes.appBar}
+          style={{ zIndex: 9999 }}
+        >
+          <Toolbar>
+            <Typography variant="h6" noWrap>
+              Clipped drawer
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Grid
+          container
+          direction="row"
+          wrap="nowrap"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+        >
           <Drawer
             className={classes.drawer}
             variant="permanent"
             classes={{
               paper: classes.drawerPaper,
             }}
-            style={{ zIndex: 1 }}
           >
-            <Toolbar style={{ zIndex: 1 }} />
-
-            <div
-              className={classes.drawerContainer}
-              style={{ zIndex: 1, minHeight: "100vh" }}
-            >
-              <div
-                className={classes.drawerContainerButton}
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  alignItems: "flex-end",
-                  width: "100%",
-                  margin: "0.5rem 0",
-                  zIndex: 1,
-                }}
-              >
-                <IconButton
-                  className={classes.menuButton}
-                  onClick={handleDrawerOpenAndClose}
-                >
-                  <Close style={{ color: "#000" }} />
-                </IconButton>
-              </div>
+            <Toolbar />
+            <div className={classes.drawerContainer}>
               <Items data={data} />
             </div>
           </Drawer>
-        )}
-        <Toolbar />
-
-        <main style={{ flexGrow: 1, minHeight: "100vh" }}>
-          <Toolbar />
-          <div className={classes.drawerHeader} />
-          {children}
-        </main>
-      </Grid>
-    </div>
+          <Container
+            style={{ maxWidth: "1280px", marginRight: 0, marginTop: "2rem" }}
+          >
+            <main className={classes.content}>
+              <Toolbar />
+              {children}
+            </main>
+          </Container>
+        </Grid>
+      </div>
+    </>
   );
 };
