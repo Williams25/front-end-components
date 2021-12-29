@@ -45,7 +45,7 @@ export const SideBar = ({ children, data }: SideBarProps) => {
         >
           <Toolbar>
             <Typography variant="h6" noWrap>
-              Clipped drawer
+              Front-end components
             </Typography>
           </Toolbar>
         </AppBar>
