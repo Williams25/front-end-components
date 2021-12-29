@@ -69,7 +69,7 @@ export const SideBar = ({ children, data }: SideBarProps) => {
             </div>
           </Drawer>
           <Container
-            style={{ maxWidth: "1280px", marginRight: 0, marginTop: "2rem" }}
+            style={{ maxWidth: "1280px", marginRight: 0, marginTop: "2.1rem" }}
           >
             <main className={classes.content}>
               <Toolbar />
