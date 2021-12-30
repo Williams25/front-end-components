@@ -10,7 +10,7 @@ type ShowTsxAndCssProps = {
 export const ShowTsxAndCss = ({ css, tsx }: ShowTsxAndCssProps) => {
   const { showTsx, showCss, handleShowTsx, handleShowCss } = useShowTsxAndCss();
   return (
-    <div style={{ width: "600px" }}>
+    <div style={{ width: "600px", marginBottom: "2rem" }}>
       <div className={styles.contentButton}>
         <button onClick={handleShowTsx}>ver tsx</button>
         <button onClick={handleShowCss}>ver css</button>
