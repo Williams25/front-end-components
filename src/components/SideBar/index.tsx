@@ -56,20 +56,26 @@ export const SideBar = ({ children, data }: SideBarProps) => {
           justifyContent="flex-end"
           alignItems="flex-end"
         >
-          <Drawer
-            className={classes.drawer}
-            variant="permanent"
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-          >
-            <Toolbar />
-            <div className={classes.drawerContainer}>
-              <Items data={data} />
-            </div>
-          </Drawer>
+          <Grid item xs={2}>
+            <Drawer
+              className={classes.drawer}
+              variant="permanent"
+              classes={{
+                paper: classes.drawerPaper,
+              }}
+            >
+              <Toolbar />
+              <div className={classes.drawerContainer}>
+                <Items data={data} />
+              </div>
+            </Drawer>
+          </Grid>
           <Container
-            style={{ maxWidth: "1280px", marginRight: 0, marginTop: "2.1rem" }}
+            style={{
+              // maxWidth: "1280px",
+              marginRight: 0,
+              marginTop: "2.1rem",
+            }}
           >
             <main className={classes.content}>
               <Toolbar />
