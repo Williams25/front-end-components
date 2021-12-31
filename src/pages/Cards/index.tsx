@@ -1,5 +1,5 @@
 import styles from "src/styles/Cards/styles.module.css";
-import { Card, CardFlipHover, CardGlass } from "src/components";
+import { Card, CardFlipHover, CardGlass, CardHexagon } from "src/components";
 
 const Cards = () => {
   return (
@@ -24,6 +24,14 @@ const Cards = () => {
         image="/assets/img/pexels-leticia-azevedo-9459781.jpg"
         subTitle="Front-end developer"
         title="xxxxxx"
+      />
+
+      <CardHexagon
+        image={"/assets/img/pexels-leticia-azevedo-9459781.jpg"}
+        title="XXXXX"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever"
       />
     </div>
   );
