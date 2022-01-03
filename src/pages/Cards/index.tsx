@@ -1,5 +1,11 @@
 import styles from "src/styles/Cards/styles.module.css";
-import { Card, CardFlipHover, CardGlass, CardHexagon } from "src/components";
+import {
+  Card,
+  CardFlipHover,
+  CardGlass,
+  CardHexagon,
+  CardGlassProduct,
+} from "src/components";
 
 const Cards = () => {
   return (
@@ -33,6 +39,8 @@ const Cards = () => {
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever"
       />
+
+      <CardGlassProduct />
     </div>
   );
 };
