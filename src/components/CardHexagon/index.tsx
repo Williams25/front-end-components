@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "./styles.module.css";
 import { ShowTsxAndCss } from "..";
 
