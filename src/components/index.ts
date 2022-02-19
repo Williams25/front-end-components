@@ -7,3 +7,4 @@ export { CardFlipHover } from "src/components/CardFlipHover";
 export { CardGlass } from "src/components/CardGlass";
 export { CardHexagon } from "src/components/CardHexagon";
 export { CardGlassProduct } from "src/components/CardGlassProduct";
+export { AnimateText } from "src/components/AnimateText";
