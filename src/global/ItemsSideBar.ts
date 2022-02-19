@@ -43,4 +43,20 @@ export const items: ItemsMenu[] = [
       },
     ],
   },
+  {
+    title: "Typography",
+    type: "collapse",
+    data: [
+      {
+        href: "/Typography",
+        text: "Text animate",
+        paths: [
+          {
+            path: "/Typography",
+            type: "static",
+          },
+        ],
+      },
+    ],
+  },
 ];
