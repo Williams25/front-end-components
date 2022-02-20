@@ -2,9 +2,9 @@
   "name": "front-end-components",
   "private": true,
   "scripts": {
-    "dev": "start-storybook -s ./public -p 3000",
-    "build": "set NODE_ENV=production&&build-storybook -s ./public",
-    "start": "start-storybook -s ./public -p 3000",
+    "dev": "next dev",
+    "build": "set NODE_ENV=production&&next build",
+    "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx,.jsx .",
     "husky:init": "npx husky-init",
