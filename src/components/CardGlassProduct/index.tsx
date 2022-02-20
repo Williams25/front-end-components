@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { ShowTsxAndCss } from "src/components";
 import styles from "./styles.module.css";
 
@@ -33,7 +32,7 @@ export const CardGlassProduct = () => {
 
       <ShowTsxAndCss
         tsx={`import styles from "./styles.module.css";
-        
+
         export const CardGlassProduct = () => {
           return (
             <>
@@ -50,7 +49,7 @@ export const CardGlassProduct = () => {
                     <span>7</span>
                     <span>7</span>
                   </div>
-        
+
                   <div className={styles.color}>
                     <h3>Cor: </h3>
                     <span />
@@ -58,7 +57,7 @@ export const CardGlassProduct = () => {
                     <span />
                     <span />
                   </div>
-        
+
                   <a href="#">Comprar</a>
                 </div>
               </div>

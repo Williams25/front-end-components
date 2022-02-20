@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { GitHub, Twitter, Mail } from "@material-ui/icons";
 import styles from "./styles.module.css";
 
