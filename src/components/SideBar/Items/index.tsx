@@ -1,13 +1,4 @@
-import {
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Box,
-  Typography,
-  MenuItem,
-} from "@material-ui/core";
-import Link from "next/link";
+import { List, Box, Typography, MenuItem } from "@material-ui/core";
 import { Collapse } from "./Collapse";
 import { useRouter } from "next/router";
 
@@ -44,7 +35,7 @@ export const Items = ({ data }: ItemsProps) => {
                       fontWeight: 700,
                       textTransform: "uppercase",
                       display: "flex",
-                      alignItems: "center",
+                      alignItems: "center"
                     }}
                   >
                     {/* {sidebarItem.icon && <>{sidebarItem.icon}</>} */}
@@ -76,7 +67,7 @@ export const Items = ({ data }: ItemsProps) => {
                         textTransform: "none",
                         lineHeight: "1.75",
                         width: "100%",
-                        margin: 0,
+                        margin: 0
                       }}
                     >
                       {item.text}
@@ -118,7 +109,7 @@ export const Items = ({ data }: ItemsProps) => {
                         textTransform: "none",
                         lineHeight: "1.75",
                         width: "100%",
-                        margin: 0,
+                        margin: 0
                       }}
                     >
                       {item.text}

@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-unused-vars */
 import { CopyBlock, dracula } from "react-code-blocks";
 
 type SyntaxHighlighterProps = {
@@ -9,7 +12,7 @@ type SyntaxHighlighterProps = {
 export const SyntaxHighlighter = ({
   code,
   language,
-  showLineNumbers,
+  showLineNumbers
 }: SyntaxHighlighterProps) => {
   return (
     <CopyBlock

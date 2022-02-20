@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-undef */
 import { useEffect, useCallback } from "react";
 import { Typography } from "@material-ui/core";
 import { useState, ReactNode } from "react";
@@ -5,7 +7,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  useStyles,
+  useStyles
 } from "./styles";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
@@ -32,7 +34,7 @@ export const Collapse = ({
   sideBar,
   title,
   children,
-  icon,
+  icon
 }: CollapseProps) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
@@ -88,7 +90,7 @@ export const Collapse = ({
             fontWeight: 700,
             textTransform: "uppercase",
             display: "flex",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           {icon && <>{icon}</>}

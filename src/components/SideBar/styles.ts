@@ -2,26 +2,26 @@ import { makeStyles, Theme } from "@material-ui/core";
 
 const drawerWidth = 240;
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    display: "flex",
+    display: "flex"
   },
   appBar: {
-    zIndex: 9999,
+    zIndex: 9999
   },
   drawer: {
     width: drawerWidth,
-    flexShrink: 0,
+    flexShrink: 0
   },
   drawerPaper: {
-    width: drawerWidth,
+    width: drawerWidth
   },
   drawerContainer: {
     overflowY: "auto",
-    overflowX: "hidden",
+    overflowX: "hidden"
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
-  },
+    padding: theme.spacing(3)
+  }
 }));

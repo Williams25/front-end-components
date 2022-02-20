@@ -1,4 +1,4 @@
-import { useState, ReactNode } from "react";
+import { ReactNode } from "react";
 import { useStyles } from "./styles";
 import {
   CssBaseline,
@@ -7,7 +7,7 @@ import {
   Grid,
   Container,
   Typography,
-  Drawer,
+  Drawer
 } from "@material-ui/core";
 import { Items } from "./Items";
 
@@ -28,11 +28,6 @@ type SideBarProps = {
 
 export const SideBar = ({ children, data }: SideBarProps) => {
   const classes = useStyles();
-  const [open, setOpen] = useState<boolean>(true);
-
-  const handleDrawerOpenAndClose = (): void => {
-    setOpen((open) => !open);
-  };
 
   return (
     <>
@@ -61,7 +56,7 @@ export const SideBar = ({ children, data }: SideBarProps) => {
               className={classes.drawer}
               variant="permanent"
               classes={{
-                paper: classes.drawerPaper,
+                paper: classes.drawerPaper
               }}
             >
               <Toolbar />
@@ -74,7 +69,7 @@ export const SideBar = ({ children, data }: SideBarProps) => {
             style={{
               // maxWidth: "1280px",
               marginRight: 0,
-              marginTop: "2.1rem",
+              marginTop: "2.1rem"
             }}
           >
             <main className={classes.content}>

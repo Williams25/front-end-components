@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import { withStyles, makeStyles, Theme } from "@material-ui/core";
 import {
   AccordionDetails as MuiAccordionDetails,
   AccordionSummary as MuiAccordionSummary,
-  Accordion as MuiAccordion,
+  Accordion as MuiAccordion
 } from "@material-ui/core";
 
 export const Accordion = withStyles({
@@ -11,17 +13,17 @@ export const Accordion = withStyles({
     border: "1px solid rgba(0, 0, 0, .125)",
     boxShadow: "none",
     "&:not(:last-child)": {
-      borderBottom: 0,
+      borderBottom: 0
     },
     "&:before": {
-      display: "none",
+      display: "none"
     },
     "&$expanded": {
-      margin: "auto",
+      margin: "auto"
     },
-    backgroundColor: "#fff",
+    backgroundColor: "#fff"
   },
-  expanded: {},
+  expanded: {}
 })(MuiAccordion);
 
 export const AccordionSummary = withStyles({
@@ -31,35 +33,35 @@ export const AccordionSummary = withStyles({
     marginBottom: -1,
     minHeight: 56,
     "&$expanded": {
-      minHeight: 56,
+      minHeight: 56
     },
     transition: "filter 0.2s",
     "&:hover": {
-      filter: "brightness(96%)",
-    },
+      filter: "brightness(96%)"
+    }
   },
   content: {
     "&$expanded": {
-      margin: "12px 0",
-    },
+      margin: "12px 0"
+    }
   },
-  expanded: {},
+  expanded: {}
 })(MuiAccordionSummary);
 
-export const AccordionDetails = withStyles((theme) => ({
+export const AccordionDetails = withStyles((theme: Theme) => ({
   root: {
     padding: "0 !important",
     display: "flex",
-    flexDirection: "column",
-  },
+    flexDirection: "column"
+  }
 }))(MuiAccordionDetails);
 
 export const useStyles = makeStyles((theme: Theme) => ({
   accordionDark: {
     backgroundColor: "#212121",
     "& svg": {
-      color: "#fafafa",
-    },
+      color: "#fafafa"
+    }
   },
-  accordion: {},
+  accordion: {}
 }));
