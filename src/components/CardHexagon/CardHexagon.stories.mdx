@@ -1,3 +1,68 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { CardHexagon } from "./index";
+
+<Meta title="Components/Cards" component={CardHexagon} />
+
+# CardHexagon
+
+<Canvas>
+  <Story
+    name="CardHexagon"
+    args={{
+      image: "/assets/img/pexels-leticia-azevedo-9459781.jpg",
+      title: "XXXXX",
+      description: `Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever`
+    }}
+  >
+    {(args) => (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <CardHexagon {...args} />
+      </div>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable of={CardHexagon} />
+
+# TSX
+
+```tsx
+/* eslint-disable @next/next/no-img-element */
+import { Content } from "./styles";
+
+type CardHexagonProps = {
+  image: string;
+  title: string;
+  description: string;
+};
+
+export const CardHexagon = ({
+  description,
+  image,
+  title
+}: CardHexagonProps) => {
+  return (
+    <Content>
+      <div className={"hexagon"}>
+        <div className={"shape"}>
+          <img src={image} alt={title} />
+
+          <div className={"content"}>
+            <h2>{title}</h2>
+            <p>{description}</p>
+          </div>
+        </div>
+      </div>
+    </Content>
+  );
+};
+```
+
+# CSS
+
+```css
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap");
 
 .hexagon {
@@ -52,7 +117,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  // width: 100%;
   height: 100%;
 
   display: flex;
@@ -78,3 +143,4 @@
 .hexagon .shape .content p {
   margin: 0;
 }
+```

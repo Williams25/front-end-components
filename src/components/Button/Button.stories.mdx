@@ -1,3 +1,53 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Button } from "./index";
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+<Canvas>
+  <Story
+    name="Card component"
+    args={{
+      variant: "button-dark",
+      title: "Button"
+    }}
+  >
+    {(args) => (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button {...args} />
+      </div>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Button} />
+
+# TSX
+
+```tsx
+import { ButtonHTMLAttributes } from "react";
+import { Content } from "./styles";
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant: "button-primary" | "button-secondary" | "button-dark";
+  title: string;
+};
+
+export const Button = ({ variant, title, ...rest }: ButtonProps) => {
+  return (
+    <Content>
+      <button {...rest} className={`button  ${variant}`}>
+        <span>{title}</span>
+      </button>
+    </Content>
+  );
+};
+```
+
+# CSS
+
+```css
 .button {
   position: relative;
   padding: 1rem 2rem;
@@ -109,3 +159,4 @@
 .button:hover span {
   opacity: 1;
 }
+```
