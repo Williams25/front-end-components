@@ -7,8 +7,8 @@ module.exports = function (plop) {
       {
         type: "input",
         name: "name",
-        message: "component name?",
-      },
+        message: "component name?"
+      }
     ],
 
     // actions to perform
@@ -16,13 +16,18 @@ module.exports = function (plop) {
       {
         type: "add",
         path: "../src/components/{{pascalCase name}}/index.tsx",
-        templateFile: "../templates/components/index.tsx.hbs",
+        templateFile: "../templates/components/index.tsx.hbs"
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase name}}/styles.module.css",
-        templateFile: "../templates/components/styles.module.css.hbs",
+        path: "../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.mdx",
+        templateFile: "../templates/components/stories.mdx.hbs"
       },
-    ],
+      {
+        type: "add",
+        path: "../src/components/{{pascalCase name}}/styles.ts",
+        templateFile: "../templates/components/styles.ts.hbs"
+      }
+    ]
   });
 };
