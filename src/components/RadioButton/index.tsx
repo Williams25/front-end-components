@@ -20,7 +20,7 @@ export const RadioButton = () => {
       <div className="container">
         <label htmlFor="yes">
           <input
-            type="radio"
+            type="checkbox"
             id="yes"
             defaultChecked={yes}
             onChange={isYes}
@@ -30,7 +30,7 @@ export const RadioButton = () => {
         </label>
 
         <label htmlFor="no">
-          <input type="radio" id="no" defaultChecked={no} onChange={isNo} />
+          <input type="checkbox" id="no" defaultChecked={no} onChange={isNo} />
           <span className="check"></span>
           No
         </label>
