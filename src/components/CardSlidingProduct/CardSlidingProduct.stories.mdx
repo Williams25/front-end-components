@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { CardSlidingProduct } from "./index";
+
+<Meta title="Components/Cards" component={`CardSlidingProduct`} />
+
+# CardSlidingProduct
+
+<Canvas>
+  <Story name="CardSlidingProduct" args={{}}>
+    {(args) => (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <CardSlidingProduct {...args} />
+      </div>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable of={CardSlidingProduct} />
+
+# TSX
+
+```tsx
+
+```
+
+# CSS
+
+```css
+
+```

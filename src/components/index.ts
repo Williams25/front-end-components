@@ -10,3 +10,4 @@ export { CardGlassProduct } from "src/components/CardGlassProduct";
 export { AnimateText } from "src/components/AnimateText";
 export { GlowingSocialMedia } from "src/components/GlowingSocialMedia";
 export { RadioButton } from "src/components/RadioButton";
+export { CardSlidingProduct } from "src/components/CardSlidingProduct";

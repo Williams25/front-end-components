@@ -4,7 +4,8 @@ import {
   CardFlipHover,
   CardGlass,
   CardHexagon,
-  CardGlassProduct
+  CardGlassProduct,
+  CardSlidingProduct
 } from "src/components";
 
 const Cards = () => {
@@ -43,6 +44,8 @@ const Cards = () => {
       />
 
       <CardGlassProduct />
+
+      <CardSlidingProduct />
     </div>
   );
 };
