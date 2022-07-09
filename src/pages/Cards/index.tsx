@@ -5,7 +5,8 @@ import {
   CardGlass,
   CardHexagon,
   CardGlassProduct,
-  CardSlidingProduct
+  CardSlidingProduct,
+  CardProductScale
 } from "src/components";
 
 const Cards = () => {
@@ -46,6 +47,8 @@ const Cards = () => {
       <CardGlassProduct />
 
       <CardSlidingProduct />
+
+      <CardProductScale />
     </div>
   );
 };
