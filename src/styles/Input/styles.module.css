@@ -1,0 +1,14 @@
+.container {
+  margin: 0;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
