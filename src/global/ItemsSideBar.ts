@@ -21,11 +21,11 @@ export const items: ItemsMenu[] = [
         paths: [
           {
             path: "/Buttons",
-            type: "static",
-          },
-        ],
-      },
-    ],
+            type: "static"
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Cards",
@@ -37,11 +37,11 @@ export const items: ItemsMenu[] = [
         paths: [
           {
             path: "/Cards",
-            type: "static",
-          },
-        ],
-      },
-    ],
+            type: "static"
+          }
+        ]
+      }
+    ]
   },
   {
     title: "Typography",
@@ -53,10 +53,26 @@ export const items: ItemsMenu[] = [
         paths: [
           {
             path: "/Typography",
-            type: "static",
-          },
-        ],
-      },
-    ],
+            type: "static"
+          }
+        ]
+      }
+    ]
   },
+  {
+    title: "Inputs",
+    type: "collapse",
+    data: [
+      {
+        href: "/Inputs",
+        text: "InputField",
+        paths: [
+          {
+            path: "/Input",
+            type: "static"
+          }
+        ]
+      }
+    ]
+  }
 ];
