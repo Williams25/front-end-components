@@ -1,16 +1,18 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  ${() => css`
+  ${({ theme }) => css`
     width: 100%;
     & header {
       width: 100%;
       height: 80px;
       padding: 1rem;
-      background-color: #071a2e;
-      border-bottom: 1px solid #21558b;
+      background-color: ${theme.colors.blue_500};
+      border-bottom: 1px solid ${theme.colors.blue_600};
+      display: flex;
+      align-items: center;
       & h1 {
-        color: #007fff;
+        color: ${theme.colors.blue_300};
         font-size: 1.125rem;
         letter-spacing: 0.1em;
       }
@@ -28,8 +30,8 @@ export const Container = styled.div`
         max-width: 300px;
         width: 100%;
         height: 100%;
-        background-color: #0a1929;
-        border-right: 1px solid #21558b;
+        background-color: ${theme.colors.blue_500};
+        border-right: 1px solid ${theme.colors.blue_600};
         padding: 1rem 0.5rem;
         overflow-x: hidden;
       }
