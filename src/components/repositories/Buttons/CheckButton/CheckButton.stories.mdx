@@ -1,21 +1,21 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import { RadioButton } from "./index";
+import { CheckButton } from "./index";
 
-<Meta title="Components/Button" component={RadioButton} />
+<Meta title="Components/Button" component={CheckButton} />
 
 # RadioButton
 
 <Canvas>
-  <Story name="RadioButton">
+  <Story name="CheckButton">
     {(args) => (
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <RadioButton {...args} />
+        <CheckButton {...args} />
       </div>
     )}
   </Story>
 </Canvas>
 
-<ArgsTable of={RadioButton} />
+<ArgsTable of={CheckButton} />
 
 # TSX
 
@@ -23,7 +23,7 @@ import { RadioButton } from "./index";
 import { useState } from "react";
 import { Content } from "./styles";
 
-export const RadioButton = () => {
+export const CheckButton = () => {
   const [yes, setYes] = useState(false);
   const [no, setNo] = useState(false);
 

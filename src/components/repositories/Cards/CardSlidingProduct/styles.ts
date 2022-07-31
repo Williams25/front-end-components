@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
+  margin-top: 2rem;
+
   .card {
     position: relative;
     width: 300px;

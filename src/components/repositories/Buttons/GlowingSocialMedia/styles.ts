@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
+  margin: 1rem 0;
   .contentSocialMedia {
     position: relative;
     display: flex;
@@ -49,7 +50,7 @@ export const Content = styled.div`
     content: "";
     position: absolute;
     inset: 30px;
-    box-shadow: 0 0 0 10px #ff0000, 0 0 0 20px #fff, 0 0 0 22px #ff0000;
+    box-shadow: 0 0 0 10px #ff0000, 0 0 0 20px #001e3c, 0 0 0 22px #ff0000;
     transition: 0.5s;
   }
 
@@ -62,7 +63,7 @@ export const Content = styled.div`
     position: absolute;
     inset: 0;
     transition: 0.5s;
-    background: #fff;
+    background: #001e3c;
     transform: rotate(45deg);
   }
 `;

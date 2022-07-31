@@ -1,12 +1,17 @@
-import { Button, GlowingSocialMedia, RadioButton } from "src/components";
-import styles from "src/styles/Buttons/styles.module.css";
+import { Button, GlowingSocialMedia, CheckButton } from "src/components";
 
 const Buttons = () => {
   return (
-    <div className={styles.container}>
-      <Button variant="button-dark" title="Button" />
-      <GlowingSocialMedia />
-      <RadioButton />
+    <div className="section-container-components">
+      <div className="components-items">
+        <Button variant="button-dark" title="Button" />
+      </div>
+      <div className="components-items">
+        <GlowingSocialMedia />
+      </div>
+      <div className="components-items">
+        <CheckButton />
+      </div>
     </div>
   );
 };

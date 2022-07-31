@@ -21,7 +21,7 @@ export const Content = styled.div`
     letter-spacing: 2px;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 0, 55, 0.9);
+    -webkit-text-stroke: 1px #fff;
   }
 
   .menu li a::before {

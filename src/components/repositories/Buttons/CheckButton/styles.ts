@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
+  margin: 1rem 0;
   .container {
     position: relative;
     display: flex;
