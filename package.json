@@ -56,6 +56,7 @@
     "@types/prismjs": "^1.16.6",
     "@types/react": "^17.0.39",
     "@types/react-syntax-highlighter": "^13.5.2",
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "^8.9.0",
     "eslint-config-next": "^12.1.0",
     "plop": "^3.0.5",
