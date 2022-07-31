@@ -1,13 +1,10 @@
 type ItemsMenu = {
   title: string;
   type: "button" | "collapse";
-  data: [
-    {
-      href: string;
-      text: string;
-      paths: [{ path: string; type: "dynamic" | "static" }];
-    }
-  ];
+  data: {
+    href: string;
+    text: string;
+  }[];
 };
 
 export const items: ItemsMenu[] = [
@@ -17,13 +14,7 @@ export const items: ItemsMenu[] = [
     data: [
       {
         href: "/Buttons",
-        text: "Button",
-        paths: [
-          {
-            path: "/Buttons",
-            type: "static"
-          }
-        ]
+        text: "Button"
       }
     ]
   },
@@ -33,13 +24,7 @@ export const items: ItemsMenu[] = [
     data: [
       {
         href: "/Cards",
-        text: "Card",
-        paths: [
-          {
-            path: "/Cards",
-            type: "static"
-          }
-        ]
+        text: "Card"
       }
     ]
   },
@@ -49,13 +34,7 @@ export const items: ItemsMenu[] = [
     data: [
       {
         href: "/Typography",
-        text: "Text animate",
-        paths: [
-          {
-            path: "/Typography",
-            type: "static"
-          }
-        ]
+        text: "Text animate"
       }
     ]
   },
@@ -65,13 +44,7 @@ export const items: ItemsMenu[] = [
     data: [
       {
         href: "/Inputs",
-        text: "InputField",
-        paths: [
-          {
-            path: "/Input",
-            type: "static"
-          }
-        ]
+        text: "InputField"
       }
     ]
   }
