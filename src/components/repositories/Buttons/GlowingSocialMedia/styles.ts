@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   .contentSocialMedia {
     position: relative;
     display: flex;

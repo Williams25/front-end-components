@@ -13,3 +13,4 @@ export { CheckButton } from "src/components/repositories/Buttons/CheckButton";
 export { CardSlidingProduct } from "src/components/repositories/Cards/CardSlidingProduct";
 export { CardProductScale } from "src/components/repositories/Cards/CardProductScale";
 export { InputField } from "src/components/repositories/Inputs/InputField";
+export { ButtonBorderEffect } from "src/components/repositories/Buttons/ButtonBorderEffect";
