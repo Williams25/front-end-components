@@ -6,7 +6,7 @@ import { CopyBlock, dracula } from "react-code-blocks";
 type SyntaxHighlighterProps = {
   code: any;
   language: any;
-  showLineNumbers: any;
+  showLineNumbers?: boolean;
 };
 
 export const SyntaxHighlighter = ({
@@ -18,7 +18,7 @@ export const SyntaxHighlighter = ({
     <CopyBlock
       text={code}
       language={language}
-      showLineNumbers={false}
+      showLineNumbers={showLineNumbers}
       theme={dracula}
       wrapLines
       codeBlock
