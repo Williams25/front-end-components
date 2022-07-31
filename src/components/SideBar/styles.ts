@@ -32,7 +32,7 @@ export const Container = styled.div`
         height: 100%;
         background-color: ${theme.colors.blue_500};
         border-right: 1px solid ${theme.colors.blue_600};
-        padding: 1rem 0.5rem;
+        padding: 0 0.5rem 1rem;
         overflow-x: hidden;
       }
 
