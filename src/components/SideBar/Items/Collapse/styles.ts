@@ -52,6 +52,7 @@ export const Details = styled.details`
           border: 0;
           outline: none;
           transition: filter 0.2s;
+          text-decoration: none;
 
           &:hover {
             filter: brightness(0.9);
