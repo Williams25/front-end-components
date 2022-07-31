@@ -18,11 +18,6 @@ module.exports = function (plop) {
         path: "../src/pages/{{pascalCase name}}/index.tsx",
         templateFile: "../templates/pages/index.tsx.hbs",
       },
-      {
-        type: "add",
-        path: "../src/styles/{{pascalCase name}}/styles.module.css",
-        templateFile: "../templates/pages/styles.module.css.hbs",
-      },
     ],
   });
 };
