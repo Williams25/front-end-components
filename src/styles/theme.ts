@@ -1,13 +1,15 @@
 const theme = {
   colors: {
-    background: "#E5E5E5",
-    text: "#969CB3",
-    title: "#363F5F",
-    shape: "#FFFFFF",
-    red: "#E62E4D",
-    green: "#33CC95",
-    blue: "#5429CC",
-    blue_light: "#6933FF"
+    blue_200: "#3399ff",
+    blue_300: "#007fff",
+    blue_400: "#001e3c",
+    blue_500: "#071a2e",
+    blue_600: "#21558b",
+    blue_700: "#0a1929",
+    blue_800: "#132f4c",
+    white: "#ffffff",
+    white_100: "#fafafa",
+    white_200: "#fafafaaa"
   }
 } as const;
 
