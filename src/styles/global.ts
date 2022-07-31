@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background-color: ${theme.colors.background!};
+      background-color: ${theme.colors.blue_400};
     }
     body,
     input,
