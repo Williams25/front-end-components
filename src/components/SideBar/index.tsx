@@ -7,13 +7,10 @@ type SideBarProps = {
   data: {
     title: string;
     type: "button" | "collapse";
-    data: [
-      {
-        href: string;
-        text: string;
-        paths: [{ path: string; type: "dynamic" | "static" }];
-      }
-    ];
+    data: {
+      href: string;
+      text: string;
+    }[];
   }[];
 };
 
@@ -25,7 +22,9 @@ export const SideBar = ({ children, data }: SideBarProps) => {
       </header>
 
       <main>
-        <aside>items ...</aside>
+        <aside>
+          <Items data={data} />
+        </aside>
         <section id="content-section">{children}</section>
       </main>
     </Container>
