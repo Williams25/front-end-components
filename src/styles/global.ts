@@ -35,5 +35,26 @@ export const GlobalStyle = createGlobalStyle`
     strong {
       font-weight: 600;
     }
+
+    & .section-container-components {
+      margin: 0;
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    & .components-items {
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      & + & {
+        border-top: 1px solid ${theme.colors.blue_600};
+      }
+    }
   `}
 `;
