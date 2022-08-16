@@ -47,5 +47,15 @@ export const items: ItemsMenu[] = [
         text: "InputField"
       }
     ]
+  },
+  {
+    title: "ProgressBar",
+    type: "collapse",
+    data: [
+      {
+        href: "/ProgressBar",
+        text: "ProgressBar"
+      }
+    ]
   }
 ];

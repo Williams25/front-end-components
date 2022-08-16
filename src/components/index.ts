@@ -15,3 +15,4 @@ export { CardProductScale } from "src/components/repositories/Cards/CardProductS
 export { InputField } from "src/components/repositories/Inputs/InputField";
 export { ButtonBorderEffect } from "src/components/repositories/Buttons/ButtonBorderEffect";
 export { InputFieldBorder } from "src/components/repositories/Inputs/InputFieldBorder";
+export { AnimatedCircularProgress } from "src/components/repositories/ProgressBar/AnimatedCircularProgress";
