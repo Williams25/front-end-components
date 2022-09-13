@@ -16,6 +16,10 @@ export const Container = styled.div`
         font-size: 1.125rem;
         letter-spacing: 0.1em;
       }
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
     }
 
     & main {
@@ -25,6 +29,7 @@ export const Container = styled.div`
       flex-direction: row;
       flex-wrap: nowrap;
       gap: 1rem;
+      margin-top: calc(80px + 2rem);
 
       & aside {
         max-width: 300px;
@@ -34,6 +39,10 @@ export const Container = styled.div`
         border-right: 1px solid ${theme.colors.blue_600};
         padding: 0 0.5rem 1rem;
         overflow-x: hidden;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        z-index: 10;
       }
 
       & #content-section {
