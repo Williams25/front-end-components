@@ -4,7 +4,7 @@ const ProgressBar = () => {
   return (
     <div className="section-container-components">
       <div className="components-items">
-        <AnimatedCircularProgress />
+        <AnimatedCircularProgress percent={75} />
       </div>
     </div>
   );
