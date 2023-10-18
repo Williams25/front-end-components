@@ -25,9 +25,11 @@ export const Container = styled.div`
     & main {
       width: 100%;
       height: calc(100vh - 80px);
-      display: flex;
+      /* display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
+      flex-wrap: nowrap; */
+      display: grid;
+      grid-template-columns: 300px 1fr;
       gap: 1rem;
       margin-top: calc(80px + 2rem);
 

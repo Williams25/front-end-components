@@ -19,6 +19,16 @@ export const items: ItemsMenu[] = [
     ]
   },
   {
+    title: "Carousel",
+    type: "collapse",
+    data: [
+      {
+        href: "/Carousel",
+        text: "Carousel"
+      }
+    ]
+  },
+  {
     title: "Cards",
     type: "collapse",
     data: [

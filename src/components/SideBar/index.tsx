@@ -22,6 +22,7 @@ export const SideBar = ({ children, data }: SideBarProps) => {
       </header>
 
       <main>
+        <div />
         <aside>
           <Items data={data} />
         </aside>
